@@ -1,0 +1,13 @@
+{
+  "name": "search-autofill",
+  "private": true,
+  "scripts": {
+    "build:trie": "gcc -std=c11 -Wall -Wextra -O2 -o trie_server trie_server.c trie.c utils.c",
+    "backend": "node backend/server.js",
+    "frontend": "npm run dev --prefix web",
+    "dev": "concurrently -k -n api,web -c blue,magenta \"npm run backend\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

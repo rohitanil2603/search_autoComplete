@@ -1,0 +1,7 @@
+trie_server
+trie_server.exe
+node_modules/
+web/node_modules/
+backend/node_modules/
+web/dist/
+.DS_Store
