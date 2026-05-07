@@ -1,0 +1,2 @@
+gcc  main.c trie.c utils.c -o autocomplete_engine
+./autocomplete_engine

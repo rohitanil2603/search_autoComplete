@@ -1,13 +1,9 @@
-hello
-hello world
-hello vijay
-vijay singh
-vijay parihar
-hubby
-hubby
-myself rohit i studey at uoh
-micro
-hjghjgftd
-claustrophobic
-clause
-helow
+tree
+linked list
+binary search tree
+array
+stack
+graph
+queue
+tree
+study
