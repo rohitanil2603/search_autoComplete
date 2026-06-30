@@ -71,7 +71,7 @@ export default function App() {
     setError(null);
     try {
       const params = new URLSearchParams({ q: trimmed, limit: String(AC_LIMIT) });
-      const data = await fetchJson(`/api/autocomplete?${params}`);
+      const data = await fetchJson(`https://search-autocomplete-2.onrender.com/api/autocomplete?${params}`);
       setSuggestions(data.suggestions || []);
       setOpen(true);
       setActiveIdx(-1);
@@ -100,7 +100,7 @@ export default function App() {
     setOpen(false);
     try {
       const params = new URLSearchParams({ q: trimmed });
-      const data = await fetchJson(`/api/search?${params}`);
+      const data = await fetchJson(`https://search-autocomplete-2.onrender.com/api/search?${params}`);
       setLastSearched(trimmed);
       setSearchResult(data);
     } catch (e) {
@@ -137,7 +137,7 @@ export default function App() {
     setInsertMsg(null);
     setError(null);
     try {
-      const data = await fetchJsonPost('/api/insert', { text: trimmed });
+      const data = await fetchJsonPost('https://search-autocomplete-2.onrender.com/api/insert', { text: trimmed });
       setInsertMsg({
         ok: true,
         text: `Added to trie and file. Total frequency for this phrase: ${data.frequency}.`,
@@ -161,7 +161,7 @@ export default function App() {
     setDeleteMsg(null);
     setError(null);
     try {
-      const data = await fetchJsonPost('/api/delete', { text: trimmed });
+      const data = await fetchJsonPost('https://search-autocomplete-2.onrender.com/api/delete', { text: trimmed });
       if (data.deleted) {
         setDeleteMsg({
           ok: true,
